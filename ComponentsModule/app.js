@@ -24,6 +24,13 @@ Vue.component('CoinDetail', {
             value: 0,
         }
     },
+    created () {
+        console.log('Created CoinDetail...')
+      },
+    
+      mounted () {
+        console.log('Mounted CoinDetail...')
+      },
 
     methods: {
         toggleShowPrices(){
