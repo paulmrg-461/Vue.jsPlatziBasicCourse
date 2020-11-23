@@ -8,7 +8,19 @@
 </head>
 <body>
     <div id="app" v-bind:style="{ background: '#' + color }">
-        <coin-detail v-on:change-color="updateColor" v-bind:coin="btc"></coin-detail>
+        <coin-detail 
+            v-on:change-color="updateColor" 
+            v-bind:coin="btc">
+
+            <template v-slot:text>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo reprehenderit cupiditate voluptatem dicta dolores unde eum commodi iusto enim itaque, sapiente veritatis id natus minus laborum provident exercitationem dignissimos ea.  
+                </p>
+            </template>
+            <template v-slot:link>
+                <a href="https://staticbl.bkmcdn.com/finanzas/wp-content/uploads/2013/09/bitcoin.png">Bitcoin Image</a>
+            </template>
+        </coin-detail>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="app.js"></script>
