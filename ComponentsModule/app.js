@@ -28,6 +28,8 @@ Vue.component('CoinDetail', {
     methods: {
         toggleShowPrices(){
             this.showPrices = !this.showPrices
+
+            this.$emit('change-color', this.showPrices ? 'FF96C8' : '3D3D3D')
         }
     },
 
@@ -88,13 +90,13 @@ new Vue({
             changePercent: 0,
             price: 8400,
             pricesWithDays: [
-              { day: 'Lunes', value: 8400 },
-              { day: 'Martes', value: 7900 },
-              { day: 'Miercoles', value: 8200 },
-              { day: 'Jueves', value: 9000 },
-              { day: 'Viernes', value: 9400 },
-              { day: 'Sabado', value: 10000 },
-              { day: 'Domingo', value: 10200 },
+              { day: 'Lunes',       value: 8400 },
+              { day: 'Martes',      value: 7900 },
+              { day: 'Miercoles',   value: 8200 },
+              { day: 'Jueves',      value: 9000 },
+              { day: 'Viernes',     value: 9400 },
+              { day: 'Sabado',      value: 10000 },
+              { day: 'Domingo',     value: 10200 },
             ],
           },
     
@@ -110,12 +112,12 @@ new Vue({
         console.log('Mounted...')
       },
     
-      /* methods: {
+      methods: {
         updateColor (color) {
           this.color = color || this.color
             .split('')
             .reverse()
             .join('')
         }
-      }, */
+      },
 })
